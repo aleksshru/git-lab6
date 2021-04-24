@@ -1,0 +1,3 @@
+﻿  6 lab.cpp
+E:\Visual Studio\6 lab\6 lab\6 lab\Header.h(239): warning C4715: Mass::operator=: значение возвращается не при всех путях выполнения
+  6 lab.vcxproj -> E:\Visual Studio\6 lab\6 lab\Debug\6 lab.exe
