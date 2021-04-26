@@ -154,7 +154,7 @@ public:
 	template<typename T>
 	friend ostream& operator<<(ostream& stream, const Stack<T>* stack);
 	comp<T>* x;
-	T Pop()
+	T Pop() override
 	{
 		T ret;
 		--count;
@@ -173,16 +173,16 @@ public:
 			cout << "Empty Stack" << endl;
 		}
 	}
-	T Peek()
+	T Peek() override
 	{
 		T ret = x->Data;
 		return ret;
 	}
-	int GetSize() const
+	int GetSize() const override
 	{
 		return count;
 	}
-	void Push(const T& D)
+	void Push(const T& D) override
 	{
 		comp<T>** c = &x;
 		comp<T>* q; //Создаем новый указатель q типа структуры comp. По сути это и есть наш новый элемент
@@ -229,11 +229,11 @@ public:
 	Mass(Mass&& other);
 	Mass& operator=(const Mass& other);
 	~Mass();
-	int GetSize() const;
-	void Push(const T &element);
-	T Pop();
+	int GetSize() const override;
+	void Push(const T &element) override;
+	T Pop() override;
 	bool Check();
-	T Peek();
+	T Peek() override;
 	template<typename T> friend ostream& operator<<(ostream& str, Mass<T>& mass);
 private:
 	int i = 0;
